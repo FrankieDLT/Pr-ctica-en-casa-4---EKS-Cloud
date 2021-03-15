@@ -7,7 +7,7 @@ const messageController = require('../src/controllers/message.controller');
 
 // path con ruta de los endpoint
 router.get('/',infoController.Index);
-router.post('/estoyvivo',messageController.estoyvivo);
-router.post('/imstillstanding',messageController.imstillstanding);
+router.get('/estoyvivo',messageController.estoyvivo);
+router.get('/imstillstanding',messageController.imstillstanding);
 
 module.exports = router;
