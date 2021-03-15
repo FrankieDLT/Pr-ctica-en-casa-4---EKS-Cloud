@@ -1,14 +1,7 @@
 
 class InfoController {
     Index(req, res){
-        res.json(
-            { 
-                version: "0.0.1",
-                paths: [
-                    "/estoyvivo"
-                ] 
-            }
-            ); 
+        res.send("<h1> Esta es la aplicación 2 </h1>"); 
     }
 
     Autores(req, res){
