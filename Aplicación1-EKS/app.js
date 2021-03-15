@@ -15,7 +15,7 @@ const { json, urlencoded } = express
 const app = express()
 
 // Definimos los puertos y host de la app.
-const PORT = process.env.PORT || 4500
+const PORT = process.env.PORT || 3500
 const HOST = process.env.HOST || "0.0.0.0"
 
 // Se asignan configuraciones para nuestro server con json
