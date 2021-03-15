@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jcop91/Pr-ctica2-Docker-DockerHub.git"
+    "url": "git+https://github.com/FrankieDLT/Pr-ctica-en-casa-4---EKS-Cloud.git"
   },
   "keywords": [
     "docker",
@@ -24,7 +24,7 @@
     "express": "^4.17.1"
   },
   "bugs": {
-    "url": "https://github.com/jcop91/Pr-ctica2-Docker-DockerHub/issues"
+    "url": "https://github.com/FrankieDLT/Pr-ctica-en-casa-4---EKS-Cloud/issues"
   },
-  "homepage": "https://github.com/jcop91/Pr-ctica2-Docker-DockerHub#readme"
+  "homepage": "https://github.com/FrankieDLT/Pr-ctica-en-casa-4---EKS-Cloud#readme"
 }
