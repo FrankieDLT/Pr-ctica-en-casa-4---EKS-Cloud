@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: despliegue-app-2
+  labels:
+    name: despliegue-app-2
+    app: Despliegue-app-2
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: despliegue-app-2
+      app: Despliegue-app-2
+  template:
+    metadata:
+      name: despliegue-app-2
+      labels:
+        name: despliegue-app-2
+        app: Despliegue-app-2
+    spec:
+      containers:
+        - name: despliegue-app-2
+          image: "572986370973.dkr.ecr.us-east-1.amazonaws.com/practica_en_casa_4_eks/app2:latest"
+          imagePullPolicy: Always
+          resources:
+            limits:
+              memory: 512Mi
+              cpu: "1"
+            requests:
+              memory: 128Mi
+              cpu: "0.2"
+          livenessProbe:
+            httpGet:
+              path: /estoyvivo
+              port: 4500
+            initialDelaySeconds: 5
+            periodSeconds: 5
