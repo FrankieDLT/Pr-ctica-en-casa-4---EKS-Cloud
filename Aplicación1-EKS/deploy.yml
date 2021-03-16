@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: despliegue-app-1
+  labels:
+    name: despliegue-app-1
+    app: Despliegue-app-1
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: despliegue-app-1
+      app: Despliegue-app-1
+  template:
+    metadata:
+      name: despliegue-app-1
+      labels:
+        name: despliegue-app-1
+        app: Despliegue-app-1
+    spec:
+      containers:
+        - name: despliegue-app-1
+          image: "882386052023.dkr.ecr.us-east-1.amazonaws.com/practica_en_casa_4_eks/app1:latest"
+          imagePullPolicy: Always
+          resources:
+            limits:
+              memory: 512Mi
+              cpu: "1"
+            requests:
+              memory: 128Mi
+              cpu: "0.2"
+          livenessProbe:
+            httpGet:
+              path: /revisasivivo
+              port: 3500
+            initialDelaySeconds: 5
+            periodSeconds: 5
